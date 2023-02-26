@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Android development",
+    "icon": "android",
+    "subskills": ["Kotlin", "Java", "Jetpack Compose"]
+  },
+  {
+    "title": "iOS development",
+    "icon": "ios",
+    "subskills": ["Swift", "SwiftUI"]
+  },
+  {
+    "title": "Cross platform development",
+    "icon": "flutter",
+    "subskills": ["Kotlin Multiplatform", "Flutter", "Dart"]
+  },
+  {
+    "title": "UI Design",
+    "icon": "figma",
+    "subskills": ["Figma", "Adobe XD"]
+  },
+  {
+    "title": "Frontend web development",
+    "icon": "react",
+    "subskills": ["Javascript", "ReactJS", "Vite", "Bootstrap"]
+  },
+  {
+    "title": "Backend",
+    "icon": "firebase",
+    "subskills": [
+      "Firebase Auth",
+      "Cloud Firestore",
+      "Realtime Database",
+      "Cloud functions"
+    ]
+  },
+  {
+    "title": "Architecture",
+    "icon": null,
+    "subskills": ["State machine", "MVI", "MVVM"]
+  }
+]

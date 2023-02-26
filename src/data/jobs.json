@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Android developer",
+    "dates": "2022 - present",
+    "company": "Square",
+    "tasks": "Build and test robust features for the Square Point of Sale app for restaurants."
+  },
+  {
+    "title": "Android developer",
+    "dates": "2019 - 2022",
+    "company": "Genetec, Inc",
+    "tasks": "Design, build, test and deploy mobile apps for the AutoVu and Stratocast product lines."
+  },
+  {
+    "title": "Software developer",
+    "dates": "2018",
+    "company": "Dalkia",
+    "tasks": "Restructure and develop new functionalities for the Dalkia store Android app, a collection of apps that field personnel need. Create and construct an admin panel web application to adjust and monitor these apps in the store."
+  },
+  {
+    "title": "Android developer",
+    "dates": "2017",
+    "company": "TagPay",
+    "tasks": "Create an Android application for registering and allocating field representatives to point of sale systems."
+  }
+]

@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Spacer from "./components/Spacer";
+import Resume from "./components/Resume";
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Header />
       <Spacer size={48} />
       <Home />
+      <Spacer size={48} />
+      <Resume />
     </div>
   );
 }
