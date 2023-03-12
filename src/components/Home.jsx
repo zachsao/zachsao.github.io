@@ -5,7 +5,7 @@ import profilePicture from "../assets/profile.jpg";
 class Home extends Component {
   render() {
     return (
-      <>
+      <div id="home" className="section">
         <Container>
           <Row>
             <Col md="auto">
@@ -30,7 +30,7 @@ class Home extends Component {
             </Col>
           </Row>
         </Container>
-      </>
+      </div>
     );
   }
 }

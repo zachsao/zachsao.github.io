@@ -37,3 +37,13 @@ a {
   font-weight: bold;
   font-style: italic;
 }
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.section {
+  padding-top: 70px;
+}

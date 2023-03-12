@@ -13,7 +13,7 @@ class Resume extends Component {
       </>
     );
     return (
-      <>
+      <div id="resume" className="section">
         <Container>
           <ResumeSection title={"Work Experience 💼"} content={jobSections} />
           <br />
@@ -21,7 +21,7 @@ class Resume extends Component {
           <br />
           <ResumeSection title={"Skills 💻"} content={<Skills />} />
         </Container>
-      </>
+      </div>
     );
   }
 }
