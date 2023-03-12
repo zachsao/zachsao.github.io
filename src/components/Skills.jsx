@@ -4,7 +4,6 @@ import skills from "../data/skills.json";
 
 class Skills extends Component {
   render() {
-    console.log(skills);
     return (
       <>
         <Accordion>

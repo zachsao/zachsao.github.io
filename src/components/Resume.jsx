@@ -19,7 +19,7 @@ class Resume extends Component {
           <br />
           <ResumeSection title={"Education 📚👨🏽‍🎓"} content={educationSection} />
           <br />
-          <ResumeSection title={"Skills 📱💻"} content={<Skills />} />
+          <ResumeSection title={"Skills 💻"} content={<Skills />} />
         </Container>
       </>
     );

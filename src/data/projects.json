@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Peachy",
+    "year": 2022,
+    "description": "A protein tracker to stay in line with your fitness goals made with Flutter.",
+    "appStoreLink": "https://apps.apple.com/us/app/peachy-protein-tracker/id6443767159",
+    "playStoreLink": null,
+    "githubLink": "https://github.com/zachsao/ProteinTracker",
+    "imagePath": "https://raw.githubusercontent.com/zachsao/ProteinTracker/main/images/logo.png"
+  },
+  {
+    "name": "Shika",
+    "year": 2022,
+    "description": "A mobile client for AniList to keep track of your favorite animes, made with Flutter.",
+    "appStoreLink": null,
+    "playStoreLink": null,
+    "githubLink": "https://github.com/zachsao/AniSekai",
+    "imagePath": "https://raw.githubusercontent.com/zachsao/AniSekai/main/assets/icon/logo.png"
+  },
+  {
+    "name": "Trivia world",
+    "year": 2021,
+    "description": "A fun trivia game to test your knowledge in different areas made with Kotlin Multiplatform.",
+    "appStoreLink": null,
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.dev.zachsao.triviasekai.androidApp&pli=1",
+    "githubLink": "https://github.com/zachsao/triviaWorld",
+    "imagePath": "https://raw.githubusercontent.com/zachsao/triviaWorld/develop/androidApp/src/main/ic_launcher-playstore.png"
+  },
+  {
+    "name": "AroundMe weather",
+    "year": 2019,
+    "description": "A simple weather app for Android",
+    "appStoreLink": null,
+    "playStoreLink": "https://play.google.com/store/apps/details?id=com.dev.zach.weatherapp",
+    "githubLink": "https://github.com/zachsao/WeatherApp",
+    "imagePath": "https://raw.githubusercontent.com/zachsao/WeatherApp/develop/app/src/main/ic_launcher-web.png"
+  }
+]
