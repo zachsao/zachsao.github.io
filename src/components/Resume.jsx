@@ -15,7 +15,7 @@ class Resume extends Component {
     return (
       <div id="resume" className="section">
         <Container>
-          <h1 className="header text-center">My resume</h1>
+          <h1 className="header text-center text-muted">experience</h1>
           <br />
           <br />
           <ResumeSection title={"Work Experience 💼"} content={jobSections} />

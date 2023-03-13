@@ -13,9 +13,7 @@ class Portfolio extends Component {
     return (
       <div id="portfolio" className="section">
         <Container className="mt-3">
-          <h1 className="header text-center">
-            Here are some apps I've built 📱
-          </h1>
+          <h1 className="header text-center text-muted">Projects</h1>
           <br />
           <br />
           <Row className="d-flex flex-row flex-nowrap overflow-auto">
