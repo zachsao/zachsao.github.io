@@ -14,7 +14,7 @@ class Resume extends Component {
     return (
       <div id="experience" className="section">
         <Container>
-          <h1 className="header text-center text-muted">experience</h1>
+          <h1 className="header text-center">experience</h1>
           <br />
           <br />
           <Row className="d-flex flex-row flex-nowrap overflow-auto">

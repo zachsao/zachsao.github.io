@@ -10,11 +10,11 @@ function App() {
       <Header />
       <Spacer size={48} />
       <Home />
-      <Spacer size={48} />
+      <Spacer size={120} />
       <Portfolio />
-      <Spacer size={48} />
+      <Spacer size={120} />
       <Resume />
-      <Spacer size={48} />
+      <Spacer size={120} />
     </div>
   );
 }

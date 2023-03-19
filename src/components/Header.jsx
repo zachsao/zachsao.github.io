@@ -9,11 +9,12 @@ class Header extends React.Component {
       <>
         <Navbar bg="dark" variant="dark" expand="lg" className="sticky-nav">
           <Container>
-            <Navbar.Brand href="#home">Zacharia Sao</Navbar.Brand>
+            <Navbar.Brand href="#home" style={{ color: "#A9CEC2" }}>
+              Zacharia Sao
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#projects">Projects</Nav.Link>
                 <Nav.Link href="#experience">Experience</Nav.Link>
               </Nav>

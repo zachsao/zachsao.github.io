@@ -11,7 +11,7 @@ class Portfolio extends Component {
     return (
       <div id="projects" className="section">
         <Container className="mt-3">
-          <h1 className="header text-center text-muted">Projects</h1>
+          <h1 className="header text-center">Projects</h1>
           <br />
           <br />
           {projects}
