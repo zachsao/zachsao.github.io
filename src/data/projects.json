@@ -2,37 +2,72 @@
   {
     "name": "Peachy",
     "year": 2022,
-    "description": "A protein tracker to stay in line with your fitness goals made with Flutter.",
+    "description": "A protein tracker to stay on course with your fitness goals. Set a goal, add the food you eat throughout the day and keep track of your protein intake.",
+    "features": [
+      "Sign in with Google/Apple",
+      "Goal based daily protein intake progress",
+      "Edit daily goal",
+      "Weekly intake",
+      "Stats (daily avg., per meal avg., streak)"
+    ],
+    "tech": "Flutter - Firebase",
     "appStoreLink": "https://apps.apple.com/us/app/peachy-protein-tracker/id6443767159",
     "playStoreLink": null,
     "githubLink": "https://github.com/zachsao/ProteinTracker",
-    "imagePath": "https://raw.githubusercontent.com/zachsao/ProteinTracker/main/images/logo.png"
+    "imagePath": "https://raw.githubusercontent.com/zachsao/ProteinTracker/main/images/logo.png",
+    "screenshots": "../../peachy_mockup.svg"
   },
   {
     "name": "Shika",
     "year": 2022,
-    "description": "A mobile client for AniList to keep track of your favorite animes, made with Flutter.",
+    "description": "A mobile client for AniList to keep track of your favorite animes. Easily keep an eye on your current progress of the animes your are watching, browse through a large collection of upcoming animes, classics and fan favorites. Add the ones that catch your attention to your watchlist",
+    "features": [
+      "OAuth sign-in with AniList",
+      "Anime progress tracker",
+      "Currently watching, planning to watch and completed animes",
+      "Browse animes with search and filters",
+      "Favorites",
+      "Stats"
+    ],
+    "tech": "Flutter - GraphQL",
     "appStoreLink": null,
     "playStoreLink": null,
     "githubLink": "https://github.com/zachsao/AniSekai",
-    "imagePath": "https://raw.githubusercontent.com/zachsao/AniSekai/main/assets/icon/logo.png"
+    "imagePath": "https://raw.githubusercontent.com/zachsao/AniSekai/main/assets/icon/logo.png",
+    "screenshots": "../../Shika_mockup.svg"
   },
   {
     "name": "Trivia world",
     "year": 2021,
     "description": "A fun trivia game to test your knowledge in different areas made with Kotlin Multiplatform.",
+    "features": [
+      "Category selection",
+      "Difficulty selection",
+      "Gameplay",
+      "Scoreboard"
+    ],
+    "tech": "KotlinMultiplatform - Jetpack Compose - MVVM - Coroutines",
     "appStoreLink": null,
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.dev.zachsao.triviasekai.androidApp&pli=1",
     "githubLink": "https://github.com/zachsao/triviaWorld",
-    "imagePath": "https://raw.githubusercontent.com/zachsao/triviaWorld/develop/androidApp/src/main/ic_launcher-playstore.png"
+    "imagePath": "https://raw.githubusercontent.com/zachsao/triviaWorld/develop/androidApp/src/main/ic_launcher-playstore.png",
+    "screenshots": "../../Triviaworld_mockup.svg"
   },
   {
     "name": "AroundMe weather",
     "year": 2019,
-    "description": "A simple weather app for Android",
+    "description": "A simple weather app for Android, powered by the OpenWeatherMap API.",
+    "features": [
+      "Display weather data arround current location",
+      "Refresh data",
+      "Search and fetch weather data for a different city",
+      "Weather details with hourly forecast for selected location"
+    ],
+    "tech": "MVVM - RxJava",
     "appStoreLink": null,
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.dev.zach.weatherapp",
     "githubLink": "https://github.com/zachsao/WeatherApp",
-    "imagePath": "https://raw.githubusercontent.com/zachsao/WeatherApp/develop/app/src/main/ic_launcher-web.png"
+    "imagePath": "https://raw.githubusercontent.com/zachsao/WeatherApp/develop/app/src/main/ic_launcher-web.png",
+    "screenshots": "../../Aroundmeweather_mockup.svg"
   }
 ]
