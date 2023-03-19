@@ -9,7 +9,7 @@ class Portfolio extends Component {
       <Project project={project} index={index} />
     ));
     return (
-      <div id="portfolio" className="section">
+      <div id="projects" className="section">
         <Container className="mt-3">
           <h1 className="header text-center text-muted">Projects</h1>
           <br />

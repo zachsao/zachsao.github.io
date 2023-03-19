@@ -9,11 +9,11 @@ function App() {
     <div className="App">
       <Header />
       <Spacer size={48} />
-      <Home id="home" />
+      <Home />
       <Spacer size={48} />
-      <Portfolio id="portfolio" />
+      <Portfolio />
       <Spacer size={48} />
-      <Resume id="resume" />
+      <Resume />
       <Spacer size={48} />
     </div>
   );

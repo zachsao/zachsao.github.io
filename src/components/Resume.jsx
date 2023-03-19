@@ -12,7 +12,7 @@ class Resume extends Component {
       </>
     );
     return (
-      <div id="resume" className="section">
+      <div id="experience" className="section">
         <Container>
           <h1 className="header text-center text-muted">experience</h1>
           <br />
