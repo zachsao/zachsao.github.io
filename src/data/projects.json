@@ -46,7 +46,7 @@
       "Gameplay",
       "Scoreboard"
     ],
-    "tech": "KotlinMultiplatform - Jetpack Compose - MVVM - Coroutines",
+    "tech": "KotlinMultiplatform - Jetpack Compose - MVVM - Coroutines - Koin",
     "appStoreLink": null,
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.dev.zachsao.triviasekai.androidApp&pli=1",
     "githubLink": "https://github.com/zachsao/triviaWorld",
@@ -63,7 +63,7 @@
       "Search and fetch weather data for a different city",
       "Weather details with hourly forecast for selected location"
     ],
-    "tech": "MVVM - RxJava",
+    "tech": "MVVM - RxJava - Dagger 2 - Retrofit",
     "appStoreLink": null,
     "playStoreLink": "https://play.google.com/store/apps/details?id=com.dev.zach.weatherapp",
     "githubLink": "https://github.com/zachsao/WeatherApp",

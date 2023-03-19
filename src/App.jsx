@@ -14,6 +14,7 @@ function App() {
       <Portfolio id="portfolio" />
       <Spacer size={48} />
       <Resume id="resume" />
+      <Spacer size={48} />
     </div>
   );
 }

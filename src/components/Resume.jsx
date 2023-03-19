@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Container, Image, Row, Card } from "react-bootstrap";
 import jobs from "../data/jobs.json";
-import Skills from "./Skills";
 
 class Resume extends Component {
   render() {
-    const jobSections = jobs.map((job) => <JobSection job={job} />);
+    const jobCards = jobs.map((job) => <Job job={job} />);
     const educationSection = (
       <>
         <h5>Software Engineering, Ms.</h5>
@@ -18,87 +17,34 @@ class Resume extends Component {
           <h1 className="header text-center text-muted">experience</h1>
           <br />
           <br />
-          <ResumeSection title={"Work Experience 💼"} content={jobSections} />
-          <br />
-          <ResumeSection title={"Education 📚👨🏽‍🎓"} content={educationSection} />
-          <br />
-          <ResumeSection title={"Skills 💻"} content={<Skills />} />
+          <Row className="d-flex flex-row flex-nowrap overflow-auto">
+            {jobCards}
+          </Row>
         </Container>
       </div>
     );
   }
 }
 
-class ResumeSection extends Component {
-  state = {};
-  render() {
-    return (
-      <>
-        <Row>
-          <Col md={5}>
-            <h1>{this.props.title}</h1>
-          </Col>
-          <Col md={6}>{this.props.content}</Col>
-        </Row>
-      </>
-    );
-  }
-}
-
-class JobSection extends Component {
-  render() {
-    return (
-      <>
-        <h5>{this.props.job.title}</h5>
-        <p>
-          {this.props.job.dates} | {this.props.job.company}
-        </p>
-        <p>{this.props.job.tasks}</p>
-        <br />
-      </>
-    );
-  }
-}
-
-class Project extends Component {
+class Job extends Component {
   render() {
     return (
       <>
         <Col>
-          <Card bg="dark" style={{ paddingTop: 40, paddingBottom: 40 }}>
+          <Card
+            bg="dark"
+            style={{ paddingTop: 40, paddingBottom: 40 }}
+            className="h-100"
+          >
             <Card.Body className="text-center">
-              <Card.Img
-                src={this.props.project.imagePath}
-                className="card-image"
-              />
-              <Card.Title className="mt-3 display-6">
-                {this.props.project.name}
+              <Card.Img src={this.props.job.logo} className="card-image" />
+              <Card.Title className="mt-3">
+                {this.props.job.title} | {this.props.job.company}
               </Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                {this.props.project.year}
+                {this.props.job.dates}
               </Card.Subtitle>
-              <Card.Text>{this.props.project.description}</Card.Text>
-              <Row>
-                <Col>
-                  <a href={this.props.project.githubLink}>
-                    <img src={githubLogo} width={50} />
-                  </a>
-                </Col>
-                {this.props.project.playStoreLink && (
-                  <Col>
-                    <a href={this.props.project.playStoreLink}>
-                      <img src={playstoreLogo} width={50} />
-                    </a>
-                  </Col>
-                )}
-                {this.props.project.appStoreLink && (
-                  <Col>
-                    <a href={this.props.project.appStoreLink}>
-                      <img src={appstoreLogo} width={50} />
-                    </a>
-                  </Col>
-                )}
-              </Row>
+              <Card.Text>{this.props.job.tasks}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
