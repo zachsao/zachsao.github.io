@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Spacer from "./components/Spacer";
 import Resume from "./components/Resume";
 import Portfolio from "./components/Portfolio";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Portfolio />
       <Spacer size={120} />
       <Resume />
+      <Spacer size={120} />
+      <ContactForm />
       <Spacer size={120} />
     </div>
   );
