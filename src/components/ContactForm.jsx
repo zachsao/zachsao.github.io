@@ -27,62 +27,64 @@ function ContactForm() {
     e.target.reset();
   };
   return (
-    <Container>
-      <h1 className="header text-center">contact</h1>
-      <Row>
-        <Col>
-          <Form ref={form} onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control
-                type="text"
-                name="user_name"
-                placeholder="John Doe"
-                required
-              />
-            </Form.Group>
+    <div id="contact">
+      <Container>
+        <h1 className="header text-center">contact</h1>
+        <Row>
+          <Col>
+            <Form ref={form} onSubmit={handleSubmit}>
+              <Form.Group className="mb-3" controlId="formBasicName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="user_name"
+                  placeholder="John Doe"
+                  required
+                />
+              </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                name="user_email"
-                placeholder="john.doe@gmail.com"
-                required
-              />
-            </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  name="user_email"
+                  placeholder="john.doe@gmail.com"
+                  required
+                />
+              </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicSubject">
-              <Form.Label>Subject</Form.Label>
-              <Form.Control
-                type="text"
-                name="subject"
-                placeholder="Let's make an app together"
-                required
-              />
-            </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicSubject">
+                <Form.Label>Subject</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="subject"
+                  placeholder="Let's make an app together"
+                  required
+                />
+              </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicRequest">
-              <Form.Label>Request</Form.Label>
-              <Form.Control
-                type="text"
-                name="message"
-                as={"textarea"}
-                rows={10}
-                placeholder="Project information or inquiry"
-                required
-              />
-            </Form.Group>
-            <Button variant="accent" type="submit">
-              Submit
-            </Button>
-          </Form>
-        </Col>
-        <Col className="align-items-end col-auto align-self-end">
-          <Image src={undrawPath} height={350} className="align-self-end" />
-        </Col>
-      </Row>
-    </Container>
+              <Form.Group className="mb-3" controlId="formBasicRequest">
+                <Form.Label>Request</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="message"
+                  as={"textarea"}
+                  rows={10}
+                  placeholder="Project information or inquiry"
+                  required
+                />
+              </Form.Group>
+              <Button variant="accent" type="submit">
+                Submit
+              </Button>
+            </Form>
+          </Col>
+          <Col className="align-items-end col-auto align-self-end">
+            <Image src={undrawPath} height={350} className="align-self-end" />
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 }
 
