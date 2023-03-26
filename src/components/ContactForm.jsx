@@ -2,6 +2,7 @@ import React, { Component, useRef } from "react";
 import { Container, Form, Button, Row, Col, Image } from "react-bootstrap";
 import undrawPath from "../assets/undraw.svg";
 import emailjs from "@emailjs/browser";
+import Spacer from "./Spacer";
 
 function ContactForm() {
   const form = useRef();
@@ -30,12 +31,20 @@ function ContactForm() {
     <div id="contact">
       <Container>
         <h1 className="header text-center">contact</h1>
-        <Row>
-          <Col>
+        <Spacer size={100} />
+        <Row className="d-flex justify-content-center">
+          <Col
+            className="d-flex align-items-center justify-content-center"
+            md={5}
+          >
+            <Image src={undrawPath} height={350} />
+          </Col>
+          <Col md={7}>
             <Form ref={form} onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
+                  style={{ backgroundColor: "#202020", color: "#f5f5f5" }}
                   type="text"
                   name="user_name"
                   placeholder="John Doe"
@@ -44,8 +53,12 @@ function ContactForm() {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
+                <Form.Label>Email</Form.Label>
                 <Form.Control
+                  style={{
+                    backgroundColor: "#202020",
+                    color: "#f5f5f5",
+                  }}
                   type="email"
                   name="user_email"
                   placeholder="john.doe@gmail.com"
@@ -56,6 +69,7 @@ function ContactForm() {
               <Form.Group className="mb-3" controlId="formBasicSubject">
                 <Form.Label>Subject</Form.Label>
                 <Form.Control
+                  style={{ backgroundColor: "#202020", color: "#f5f5f5" }}
                   type="text"
                   name="subject"
                   placeholder="Let's make an app together"
@@ -64,12 +78,13 @@ function ContactForm() {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicRequest">
-                <Form.Label>Request</Form.Label>
+                <Form.Label>Message</Form.Label>
                 <Form.Control
+                  style={{ backgroundColor: "#202020", color: "#f5f5f5" }}
                   type="text"
                   name="message"
                   as={"textarea"}
-                  rows={10}
+                  rows={6}
                   placeholder="Project information or inquiry"
                   required
                 />
@@ -78,9 +93,6 @@ function ContactForm() {
                 Submit
               </Button>
             </Form>
-          </Col>
-          <Col className="align-items-end col-auto align-self-end">
-            <Image src={undrawPath} height={350} className="align-self-end" />
           </Col>
         </Row>
       </Container>

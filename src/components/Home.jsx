@@ -15,7 +15,7 @@ class Home extends Component {
             height={300}
             className="circle-image"
           />
-          <Spacer size={32} />
+          <Spacer size={100} />
           <p className="display-1 fw-bold">
             <span style={{ color: "var(--accent)" }}>Hi, </span>
             I'm Zacharia 👋

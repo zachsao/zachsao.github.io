@@ -5,12 +5,6 @@ import jobs from "../data/jobs.json";
 class Resume extends Component {
   render() {
     const jobCards = jobs.map((job) => <Job job={job} />);
-    const educationSection = (
-      <>
-        <h5>Software Engineering, Ms.</h5>
-        <p>2019 | Ecole Nationale Supérieure des Mines de Douai, France</p>
-      </>
-    );
     return (
       <div id="experience" className="section">
         <Container>
@@ -34,7 +28,7 @@ class Job extends Component {
           <Card
             bg="dark"
             style={{ paddingTop: 40, paddingBottom: 40 }}
-            className="h-100"
+            className="h-100 border-0"
           >
             <Card.Body className="text-center">
               <Card.Img src={this.props.job.logo} className="card-image" />
