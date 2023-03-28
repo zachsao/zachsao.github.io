@@ -16,7 +16,7 @@ class Home extends Component {
             className="circle-image"
           />
           <Spacer size={100} />
-          <p className="display-1 fw-bold">
+          <p className="display-1 fw-bold typewriter d-inline-block">
             <span style={{ color: "var(--accent)" }}>Hi, </span>
             I'm Zacharia 👋
           </p>
