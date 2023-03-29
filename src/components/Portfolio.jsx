@@ -23,12 +23,12 @@ class Portfolio extends Component {
 
 class Project extends Component {
   render() {
-    if (this.props.index % 2 == 0) {
+    if (this.props.index % 2 == 0 || window.innerWidth < 768) {
       return (
         <>
           <Row md={2} className="justify-content-md-center mb-5">
             <Col>
-              <img src={this.props.project.screenshots} width={500} />
+              <Image src={this.props.project.screenshots} className="w-100" />
             </Col>
             <Col md={5}>
               <ProjectDescription project={this.props.project} />
@@ -46,7 +46,7 @@ class Project extends Component {
           </Col>
 
           <Col className="d-flex justify-content-md-center">
-            <img src={this.props.project.screenshots} width={500} />
+            <Image src={this.props.project.screenshots} className="w-100" />
           </Col>
         </Row>
         {this.props.index != 3 && <Spacer size={50} />}
