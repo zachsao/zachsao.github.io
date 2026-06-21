@@ -1,50 +1,43 @@
-import React, { Component } from "react";
-import { Col, Container, Image, Row, Card } from "react-bootstrap";
 import jobs from "../data/jobs.json";
 
-class Resume extends Component {
-  render() {
-    const jobCards = jobs.map((job) => <Job job={job} />);
-    return (
-      <div id="experience" className="section">
-        <Container>
-          <h1 className="header text-center">experience</h1>
-          <br />
-          <br />
-          <Row className="d-flex flex-row flex-nowrap overflow-auto">
-            {jobCards}
-          </Row>
-        </Container>
+function TimelineItem({ job, index }) {
+  return (
+    <div
+      className="timeline-item reveal"
+      style={{ transitionDelay: `${index * 100}ms` }}
+    >
+      <div className="timeline-item__dot">
+        <img src={job.logo} alt={job.company} />
       </div>
-    );
-  }
+      <div className="timeline-item__content">
+        <div className="timeline-item__header">
+          <h3 className="timeline-item__title">{job.title}</h3>
+          <span className="timeline-item__company">{job.company}</span>
+        </div>
+        <p className="timeline-item__dates">{job.dates}</p>
+        <p className="timeline-item__desc">{job.tasks}</p>
+      </div>
+    </div>
+  );
 }
 
-class Job extends Component {
-  render() {
-    return (
-      <>
-        <Col>
-          <Card
-            bg="dark"
-            style={{ paddingTop: 40, paddingBottom: 40 }}
-            className="h-100 border-0"
-          >
-            <Card.Body className="text-center">
-              <Card.Img src={this.props.job.logo} className="card-image" />
-              <Card.Title className="mt-3">
-                {this.props.job.title} | {this.props.job.company}
-              </Card.Title>
-              <Card.Subtitle className="mb-2 text-muted">
-                {this.props.job.dates}
-              </Card.Subtitle>
-              <Card.Text>{this.props.job.tasks}</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </>
-    );
-  }
+function Resume() {
+  return (
+    <section id="experience" className="section">
+      <div className="container">
+        <div className="reveal">
+          <p className="section-label">Experience</p>
+          <h2 className="section-title">Where I've worked</h2>
+        </div>
+
+        <div className="timeline">
+          {jobs.map((job, index) => (
+            <TimelineItem key={job.company} job={job} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Resume;

@@ -1,100 +1,83 @@
-import React, { Component } from "react";
-import { Col, Row, Container, Card, Image } from "react-bootstrap";
-import appstoreLogo from "../assets/appstore-badge.svg";
-import playstoreLogo from "../assets/google-play-badge.png";
+import githubIcon from "../assets/github.svg";
 import projectList from "../data/projects.json";
-import Spacer from "./Spacer";
-class Portfolio extends Component {
-  render() {
-    const projects = projectList.map((project, index) => (
-      <Project project={project} index={index} />
-    ));
-    return (
-      <div id="projects" className="section">
-        <Container className="mt-3">
-          <h1 className="header text-center">Projects</h1>
-          <Spacer size={100} />
-          {projects}
-        </Container>
+
+function ProjectCard({ project, index }) {
+  const isReverse = index % 2 !== 0;
+
+  return (
+    <article
+      className={`project-card reveal${isReverse ? " project-card--reverse" : ""}`}
+      style={{ transitionDelay: `${index * 80}ms` }}
+    >
+      <div className="project-card__mockup">
+        <img src={project.screenshots} alt={`${project.name} mockup`} />
       </div>
-    );
-  }
-}
 
-class Project extends Component {
-  render() {
-    if (this.props.index % 2 == 0 || window.innerWidth < 768) {
-      return (
-        <>
-          <Row md={2} className="justify-content-md-center mb-5">
-            <Col>
-              <Image src={this.props.project.screenshots} className="w-100" />
-            </Col>
-            <Col md={5}>
-              <ProjectDescription project={this.props.project} />
-            </Col>
-          </Row>
-          {this.props.index != 3 && <Spacer size={50} />}
-        </>
-      );
-    }
-    return (
-      <>
-        <Row md={2} className="justify-content-md-center mb-5">
-          <Col md={5}>
-            <ProjectDescription project={this.props.project} />
-          </Col>
+      <div className="project-card__body">
+        <div className="project-card__header">
+          <img
+            src={project.imagePath}
+            alt=""
+            className="project-card__icon"
+          />
+          <h3 className="project-card__name">{project.name}</h3>
+        </div>
 
-          <Col className="d-flex justify-content-md-center">
-            <Image src={this.props.project.screenshots} className="w-100" />
-          </Col>
-        </Row>
-        {this.props.index != 3 && <Spacer size={50} />}
-      </>
-    );
-  }
-}
+        <p className="project-card__year">{project.year}</p>
+        <p className="project-card__desc">{project.description}</p>
 
-class ProjectDescription extends Component {
-  render() {
-    return (
-      <>
-        <Row className="d-flex align-items-center">
-          <Col md="auto">
-            <Image src={this.props.project.imagePath} rounded width={50} />
-          </Col>
-          <Col>
-            <p className="mt-3 display-6">{this.props.project.name}</p>
-          </Col>
-        </Row>
-        <p className="mb-2 text-muted">{this.props.project.year}</p>
-        <p>{this.props.project.description}</p>
-        <p>Features:</p>
-        <ul>
-          {this.props.project.features.map((feature) => (
-            <li>{feature}</li>
+        <div className="project-card__tags">
+          {project.tech.split(" - ").map((tech) => (
+            <span key={tech} className="tag">
+              {tech}
+            </span>
           ))}
-        </ul>
-        <p>Tech stack: {this.props.project.tech}</p>
-        <Row>
-          {this.props.project.playStoreLink && (
-            <Col md="auto">
-              <a href={this.props.project.playStoreLink}>
-                <img src={playstoreLogo} width={150} />
-              </a>
-            </Col>
+        </div>
+
+        <div className="project-card__features">
+          <p className="project-card__features-title">Features</p>
+          <ul>
+            {project.features.map((feature) => (
+              <li key={feature}>{feature}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="project-card__links">
+          {project.githubLink && (
+            <a
+              href={project.githubLink}
+              className="project-card__github"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={githubIcon} alt="" />
+              Source code
+            </a>
           )}
-          {this.props.project.appStoreLink && (
-            <Col md="auto" className="d-flex align-items-center">
-              <a href={this.props.project.appStoreLink}>
-                <img src={appstoreLogo} width={130} />
-              </a>
-            </Col>
-          )}
-        </Row>
-      </>
-    );
-  }
+        </div>
+      </div>
+    </article>
+  );
+}
+
+function Portfolio() {
+  return (
+    <section id="projects" className="section">
+      <div className="container">
+        <div className="reveal">
+          <p className="section-label">Portfolio</p>
+          <h2 className="section-title">Personal projects</h2>
+        </div>
+
+        <div className="projects__grid">
+          {projectList.map((project, index) => (
+            <ProjectCard key={project.name} project={project} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Portfolio;

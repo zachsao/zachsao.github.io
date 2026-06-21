@@ -1,30 +1,65 @@
-import React from "react";
-import { Nav } from "react-bootstrap";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
+import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
-class Header extends React.Component {
-  render() {
-    return (
-      <>
-        <Navbar bg="dark" variant="dark" expand="lg" className="sticky-nav">
-          <Container>
-            <Navbar.Brand href="#home" style={{ color: "#A9CEC2" }}>
-              Zacharia Sao
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#projects">Projects</Nav.Link>
-                <Nav.Link href="#experience">Experience</Nav.Link>
-                <Nav.Link href="#contact">Contact</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </>
-    );
-  }
+const links = [
+  { href: "#freelance", label: "Client work" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
+];
+
+function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const closeMenu = () => setMenuOpen(false);
+
+  return (
+    <nav className={`nav${scrolled ? " scrolled" : ""}`}>
+      <div className="nav__inner">
+        <a href="#home" className="nav__logo" onClick={closeMenu}>
+          Zacharia Sao
+        </a>
+
+        <div className="nav__end">
+          <button
+            className={`nav__toggle${menuOpen ? " open" : ""}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          <div className={`nav__links${menuOpen ? " open" : ""}`}>
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="nav__link"
+                onClick={closeMenu}
+              >
+                {link.label}
+              </a>
+            ))}
+            <a href="#contact" className="nav__cta" onClick={closeMenu}>
+              Get in touch
+            </a>
+          </div>
+
+          <ThemeToggle />
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 export default Header;

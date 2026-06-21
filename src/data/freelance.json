@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Staff Services",
+    "domain": "staff-services.com",
+    "url": "https://www.staff-services.com/",
+    "year": "2024",
+    "location": "France",
+    "role": "Design & development",
+    "tech": ["Framer"],
+    "previewBg": "#deeffa",
+    "previewFg": "#013384",
+    "accentColor": "#38bdf8",
+    "logo": "/staff-services-logo.png",
+    "logoAlt": "StaffServices logo",
+    "logoWide": true,
+    "description": "A landing page for a French hospitality staffing agency that connects hotels with trained housekeeping, front-desk, and cafeteria teams — available 7 days a week with 4–5 star hotel standards.",
+    "highlights": [
+      "Lead capture with callback request flow",
+      "Three service pillars: Housekeeping, Réception & Cafétéria",
+      "FAQ, pricing positioning & trust-building sections",
+      "Fully responsive, conversion-focused layout"
+    ]
+  },
+  {
+    "name": "World League",
+    "domain": "worldleague.ca",
+    "url": "https://www.worldleague.ca/",
+    "year": "2026",
+    "location": "Montreal, QC",
+    "role": "Full-stack rebuild",
+    "tech": ["MongoDB", "Express", "Angular", "Node.js"],
+    "previewBg": "#0d6efd",
+    "previewFg": "#ffffff",
+    "accentColor": "#75baff",
+    "logo": "/world-league-logo.png",
+    "logoAlt": "World League logo",
+    "logoInvert": true,
+    "description": "End-to-end rebuild of the World League website — migrated from WordPress into a custom full-stack web app with user authentication, payment processing, and league management for players and organizers.",
+    "highlights": [
+      "WordPress → MEAN stack migration",
+      "User authentication & account management",
+      "Payment processing for league registrations",
+      "League schedules, standings & registration flows"
+    ]
+  }
+]

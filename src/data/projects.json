@@ -11,11 +11,9 @@
       "Stats (daily avg., per meal avg., streak)"
     ],
     "tech": "Flutter - Firebase",
-    "appStoreLink": "https://apps.apple.com/us/app/peachy-protein-tracker/id6443767159",
-    "playStoreLink": null,
     "githubLink": "https://github.com/zachsao/ProteinTracker",
     "imagePath": "https://raw.githubusercontent.com/zachsao/ProteinTracker/main/images/logo.png",
-    "screenshots": "../../peachy_mockup.svg"
+    "screenshots": "/peachy_mockup.svg"
   },
   {
     "name": "Shika",
@@ -30,11 +28,9 @@
       "Stats"
     ],
     "tech": "Flutter - GraphQL",
-    "appStoreLink": null,
-    "playStoreLink": null,
     "githubLink": "https://github.com/zachsao/AniSekai",
     "imagePath": "https://raw.githubusercontent.com/zachsao/AniSekai/main/assets/icon/logo.png",
-    "screenshots": "../../Shika_mockup.svg"
+    "screenshots": "/Shika_mockup.svg"
   },
   {
     "name": "Trivia world",
@@ -47,11 +43,9 @@
       "Scoreboard"
     ],
     "tech": "KotlinMultiplatform - Jetpack Compose - MVVM - Coroutines - Koin",
-    "appStoreLink": null,
-    "playStoreLink": "https://play.google.com/store/apps/details?id=com.dev.zachsao.triviasekai.androidApp&pli=1",
     "githubLink": "https://github.com/zachsao/triviaWorld",
     "imagePath": "https://raw.githubusercontent.com/zachsao/triviaWorld/develop/androidApp/src/main/ic_launcher-playstore.png",
-    "screenshots": "../../Triviaworld_mockup.svg"
+    "screenshots": "/Triviaworld_mockup.svg"
   },
   {
     "name": "AroundMe weather",
@@ -64,10 +58,8 @@
       "Weather details with hourly forecast for selected location"
     ],
     "tech": "MVVM - RxJava - Dagger 2 - Retrofit",
-    "appStoreLink": null,
-    "playStoreLink": "https://play.google.com/store/apps/details?id=com.dev.zach.weatherapp",
     "githubLink": "https://github.com/zachsao/WeatherApp",
     "imagePath": "https://raw.githubusercontent.com/zachsao/WeatherApp/develop/app/src/main/ic_launcher-web.png",
-    "screenshots": "../../Aroundmeweather_mockup.svg"
+    "screenshots": "/Aroundmeweather_mockup.svg"
   }
 ]

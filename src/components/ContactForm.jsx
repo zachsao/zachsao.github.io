@@ -1,13 +1,13 @@
-import React, { Component, useRef } from "react";
-import { Container, Form, Button, Row, Col, Image } from "react-bootstrap";
-import undrawPath from "../assets/undraw.svg";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Spacer from "./Spacer";
 
 function ContactForm() {
   const form = useRef();
+  const [status, setStatus] = useState(null);
+
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents default refresh by the browser
+    e.preventDefault();
+    setStatus("sending");
 
     emailjs
       .sendForm(
@@ -16,87 +16,106 @@ function ContactForm() {
         form.current,
         import.meta.env.VITE_PUBLIC_KEY
       )
-      .then(
-        (result) => {
-          alert("Message Sent, We will get back to you shortly", result.text);
-        },
-        (error) => {
-          alert("An error occurred, Please try again", error.text);
-        }
-      );
-
-    e.target.reset();
+      .then(() => {
+        setStatus("success");
+        e.target.reset();
+        setTimeout(() => setStatus(null), 4000);
+      })
+      .catch(() => {
+        setStatus("error");
+        setTimeout(() => setStatus(null), 4000);
+      });
   };
+
   return (
-    <div id="contact">
-      <Container>
-        <h1 className="header text-center">contact</h1>
-        <Spacer size={100} />
-        <Row className="d-flex justify-content-center">
-          <Col
-            className="d-flex align-items-center justify-content-center"
-            md={5}
+    <section id="contact" className="section">
+      <div className="container">
+        <div className="reveal">
+          <p className="section-label">Contact</p>
+          <h2 className="section-title">Let's build something</h2>
+        </div>
+
+        <div className="contact__grid reveal">
+          <div className="contact__intro">
+            <p>
+              Have a project in mind or want to chat about mobile development?
+              Drop me a message — I typically respond within a day or two.
+            </p>
+            <a
+              href="https://www.linkedin.com/in/zacharia-sao-4aa20850/"
+              className="contact__email"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Connect on LinkedIn →
+            </a>
+          </div>
+
+          <form
+            ref={form}
+            className="contact-form"
+            onSubmit={handleSubmit}
           >
-            <Image src={undrawPath} height={350} />
-          </Col>
-          <Col md={7}>
-            <Form ref={form} onSubmit={handleSubmit}>
-              <Form.Group className="mb-3" controlId="formBasicName">
-                <Form.Label>Name</Form.Label>
-                <Form.Control
-                  style={{ backgroundColor: "#202020", color: "#f5f5f5" }}
-                  type="text"
-                  name="user_name"
-                  placeholder="John Doe"
-                  required
-                />
-              </Form.Group>
+            <div className="form-group">
+              <label htmlFor="user_name">Name</label>
+              <input
+                id="user_name"
+                type="text"
+                name="user_name"
+                placeholder="John Doe"
+                required
+              />
+            </div>
 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  style={{
-                    backgroundColor: "#202020",
-                    color: "#f5f5f5",
-                  }}
-                  type="email"
-                  name="user_email"
-                  placeholder="john.doe@gmail.com"
-                  required
-                />
-              </Form.Group>
+            <div className="form-group">
+              <label htmlFor="user_email">Email</label>
+              <input
+                id="user_email"
+                type="email"
+                name="user_email"
+                placeholder="john.doe@gmail.com"
+                required
+              />
+            </div>
 
-              <Form.Group className="mb-3" controlId="formBasicSubject">
-                <Form.Label>Subject</Form.Label>
-                <Form.Control
-                  style={{ backgroundColor: "#202020", color: "#f5f5f5" }}
-                  type="text"
-                  name="subject"
-                  placeholder="Let's make an app together"
-                  required
-                />
-              </Form.Group>
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input
+                id="subject"
+                type="text"
+                name="subject"
+                placeholder="Let's make an app together"
+                required
+              />
+            </div>
 
-              <Form.Group className="mb-3" controlId="formBasicRequest">
-                <Form.Label>Message</Form.Label>
-                <Form.Control
-                  style={{ backgroundColor: "#202020", color: "#f5f5f5" }}
-                  type="text"
-                  name="message"
-                  as={"textarea"}
-                  rows={6}
-                  placeholder="Project information or inquiry"
-                  required
-                />
-              </Form.Group>
-              <Button variant="accent" type="submit">
-                Submit
-              </Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Project details or inquiry..."
+                required
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="btn btn--primary"
+              disabled={status === "sending"}
+            >
+              {status === "sending"
+                ? "Sending..."
+                : status === "success"
+                  ? "Message sent ✓"
+                  : status === "error"
+                    ? "Failed — try again"
+                    : "Send message"}
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
   );
 }
 
